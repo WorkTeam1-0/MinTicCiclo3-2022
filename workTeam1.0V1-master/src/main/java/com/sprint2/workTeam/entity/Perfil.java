@@ -7,7 +7,10 @@ public class Perfil {
     //Atributo
     private String id;
     private String imagen;
+    private String telefono;
+    private User usuario;
 
+    //Constructor
     public Perfil(String id, String imagen, String telefono, User usuario) {
         this.id = id;
         this.imagen = imagen;
@@ -15,9 +18,8 @@ public class Perfil {
         this.usuario = usuario;
     }
 
-    private String telefono;
-    private User usuario;
 
+    //Getters and Setters
     public String getId() {
         return id;
     }
