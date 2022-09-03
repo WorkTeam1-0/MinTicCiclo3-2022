@@ -8,7 +8,10 @@ public class Transaccion {
     private Long id;
     private String concepto;
     private Float monto;
+    private User usuario;
+    private Empresa empresa;
 
+    //Constructor
     public Transaccion(Long id, String concepto, Float monto, User usuario, Empresa empresa) {
         this.id = id;
         this.concepto =  concepto;
@@ -17,9 +20,9 @@ public class Transaccion {
         this.empresa = empresa;
     }
 
-    private User usuario;
-    private Empresa empresa;
 
+
+    //Getters and Setters
     public Long getId() {
         return id;
     }
