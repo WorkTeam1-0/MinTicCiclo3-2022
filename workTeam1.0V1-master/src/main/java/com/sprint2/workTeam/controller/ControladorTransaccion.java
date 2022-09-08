@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class ControladorTransaccion {
-@RequestMapping("/")
+@RequestMapping(value= holamundo)
  public String holamundo(){
-    return  "Hola mundo con sprint Boot";
+           return  "Hola mundo con sprint Boot";
 }
 
 }
