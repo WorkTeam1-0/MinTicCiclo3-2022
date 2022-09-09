@@ -36,7 +36,6 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -51,15 +50,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			</dependency>
-		<dependency>
-			<groupId>io.mateu</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>apache-tomcat</artifactId>
-			<version>9.0.65-atlassian-hosted</version>
 		</dependency>
 	</dependencies>
 

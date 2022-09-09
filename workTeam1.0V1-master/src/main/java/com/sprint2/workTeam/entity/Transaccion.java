@@ -14,7 +14,7 @@ public class Transaccion {
     //Constructor
     public Transaccion(Long id, String concepto, Float monto, User usuario, Empresa empresa) {
         this.id = id;
-        this.concepto =  concepto;
+        this.concepto = concepto;
         this.monto = monto;
         this.usuario = usuario;
         this.empresa = empresa;

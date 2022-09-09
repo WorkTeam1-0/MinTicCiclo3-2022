@@ -33,7 +33,7 @@ public class Perfil {
     }
 
     public void setImagen(String imagen) {
-        this.imagen =  imagen;
+        this.imagen = imagen;
     }
 
     public String getTelefono() {
