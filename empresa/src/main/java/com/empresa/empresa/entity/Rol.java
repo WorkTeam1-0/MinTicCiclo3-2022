@@ -1,7 +1,7 @@
 package com.empresa.empresa.entity;
 import org.apache.catalina.User;
 
-public class Perfil {
+public class Rol {
     //Atributo
     private String id;
     private String imagen;
@@ -9,7 +9,7 @@ public class Perfil {
     private User usuario;
 
     //Constructor
-    public Perfil(String id, String imagen, String telefono, User usuario) {
+    public Rol(String id, String imagen, String telefono, User usuario) {
         this.id = id;
         this.imagen = imagen;
         this.telefono = telefono;
