@@ -1,59 +1,64 @@
 package com.empresa.empresa.entity;
-import org.apache.catalina.User;
+
 public class Empresa {
     //Atributo
-    private Long idEmpresa;
-    private String nombreEmpresa;
-    private String documentoEmpresa;
-    private String telefonoEmpresa;
+    private long idEmpresa;
+    private String nombre;
+    private String tipoIdentificacion;
+    private long numeroIdentificacion;
+    private long telefono;
     private String direccion;
-    private User usuarios [];
-    private Transaccion transacciones [];
 
     //Constructor
-
-    public Empresa(Long idEmpresa, String nombreEmpresa, String documentoEmpresa, String telefonoEmpresa, String direccion, User[] usuarios, Transaccion[] transacciones) {
+    public Empresa(long idEmpresa, String nombre, String tipoIdentificacion, long numeroIdentificacion, long telefono, String direccion) {
         this.idEmpresa = idEmpresa;
-        this.nombreEmpresa = nombreEmpresa;
-        this.documentoEmpresa = documentoEmpresa;
-        this.telefonoEmpresa = telefonoEmpresa;
+        this.nombre = nombre;
+        this.tipoIdentificacion = tipoIdentificacion;
+        this.numeroIdentificacion = numeroIdentificacion;
+        this.telefono = telefono;
         this.direccion = direccion;
-        this.usuarios = usuarios;
-        this.transacciones = transacciones;
     }
 
     //Getters and Setters
 
-    public Long getIdEmpresa() {
+    public long getIdEmpresa() {
         return idEmpresa;
     }
 
-    public void setIdEmpresa(Long idEmpresa) {
+    public void setIdEmpresa(long idEmpresa) {
         this.idEmpresa = idEmpresa;
     }
 
-    public String getNombreEmpresa() {
-        return nombreEmpresa;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreEmpresa(String nombreEmpresa) {
-        this.nombreEmpresa = nombreEmpresa;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getDocumentoEmpresa() {
-        return documentoEmpresa;
+    public String getTipoIdentificacion() {
+        return tipoIdentificacion;
     }
 
-    public void setDocumentoEmpresa(String documentoEmpresa) {
-        this.documentoEmpresa = documentoEmpresa;
+    public void setTipoIdentificacion(String tipoIdentificacion) {
+        this.tipoIdentificacion = tipoIdentificacion;
     }
 
-    public String getTelefonoEmpresa() {
-        return telefonoEmpresa;
+    public long getNumeroIdentificacion() {
+        return numeroIdentificacion;
     }
 
-    public void setTelefonoEmpresa(String telefonoEmpresa) {
-        this.telefonoEmpresa = telefonoEmpresa;
+    public void setNumeroIdentificacion(long numeroIdentificacion) {
+        this.numeroIdentificacion = numeroIdentificacion;
+    }
+
+    public long getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(long telefono) {
+        this.telefono = telefono;
     }
 
     public String getDireccion() {
@@ -62,21 +67,5 @@ public class Empresa {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
-    }
-
-    public User[] getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(User[] usuarios) {
-        this.usuarios = usuarios;
-    }
-
-    public Transaccion[] getTransacciones() {
-        return transacciones;
-    }
-
-    public void setTransacciones(Transaccion[] transacciones) {
-        this.transacciones = transacciones;
     }
 }

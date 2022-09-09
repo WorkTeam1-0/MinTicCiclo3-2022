@@ -1,52 +1,31 @@
 package com.empresa.empresa.entity;
-import org.apache.catalina.User;
+
 
 public class Rol {
     //Atributo
-    private String id;
-    private String imagen;
-    private String telefono;
-    private User usuario;
+    private long idRol;
+    private String nombreRol;
 
     //Constructor
-    public Rol(String id, String imagen, String telefono, User usuario) {
-        this.id = id;
-        this.imagen = imagen;
-        this.telefono = telefono;
-        this.usuario = usuario;
+    public Rol(long idRol, String nombreRol) {
+        this.idRol = idRol;
+        this.nombreRol = nombreRol;
     }
-
 
     //Getters and Setters
-    public String getId() {
-        return id;
+    public long getIdRol() {
+        return idRol;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setIdRol(long idRol) {
+        this.idRol = idRol;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getNombreRol() {
+        return nombreRol;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen =  imagen;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public User getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(User usuario) {
-        this.usuario = usuario;
+    public void setNombreRol(String nombreRol) {
+        this.nombreRol = nombreRol;
     }
 }

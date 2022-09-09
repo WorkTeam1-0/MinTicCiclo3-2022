@@ -2,70 +2,39 @@ package com.empresa.empresa.entity;
 
 public class Empleado {
     //Atributo
-    private Long idEmpleado;
-    private String email;
-    private String perfil;
-    private String rol;
-    private String empresa;
-    private Transaccion transacciones [];
+    private long idEmpleado;
+    private Usuario idUsuario;
+    private Empresa idEmpresa;
 
     //Constructor
-    public Empleado(Long idEmpleado, String email, String perfil, String rol, String empresa, Transaccion[] transacciones) {
+    public Empleado(long idEmpleado, Usuario idUsuario, Empresa idEmpresa) {
         this.idEmpleado = idEmpleado;
-        this.email = email;
-        this.perfil = perfil;
-        this.rol = rol;
-        this.empresa = empresa;
-        this.transacciones = transacciones;
+        this.idUsuario = idUsuario;
+        this.idEmpresa = idEmpresa;
     }
 
     //Getters and Setters
-
-    public Long getIdEmpleado() {
+    public long getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(Long idEmpleado) {
+    public void setIdEmpleado(long idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
 
-    public String getEmail() {
-        return email;
+    public Usuario getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setIdUsuario(Usuario idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public String getPerfil() {
-        return perfil;
+    public Empresa getIdEmpresa() {
+        return idEmpresa;
     }
 
-    public void setPerfil(String perfil) {
-        this.perfil = perfil;
-    }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
-    public String getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
-    }
-
-    public Transaccion[] getTransacciones() {
-        return transacciones;
-    }
-
-    public void setTransacciones(Transaccion[] transacciones) {
-        this.transacciones = transacciones;
+    public void setIdEmpresa(Empresa idEmpresa) {
+        this.idEmpresa = idEmpresa;
     }
 }
