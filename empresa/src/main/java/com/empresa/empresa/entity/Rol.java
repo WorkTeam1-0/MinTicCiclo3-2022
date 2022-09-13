@@ -7,6 +7,7 @@ public class Rol {
     private String nombreRol;
 
     //Constructor
+    public Rol(){}
     public Rol(long idRol, String nombreRol) {
         this.idRol = idRol;
         this.nombreRol = nombreRol;
