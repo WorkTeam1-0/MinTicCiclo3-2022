@@ -1,5 +1,8 @@
 package com.empresa.empresa.entity;
 
+import javax.persistence.Entity;
+
+//@Entity
 public class Empleado {
     //Atributo
     private long idEmpleado;

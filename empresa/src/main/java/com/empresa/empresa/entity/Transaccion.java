@@ -1,8 +1,10 @@
 package com.empresa.empresa.entity;
 
 
+import javax.persistence.Entity;
 import java.util.Date;
 
+//@Entity
 public class Transaccion {
     //Atributos
     private long idTransaccion;

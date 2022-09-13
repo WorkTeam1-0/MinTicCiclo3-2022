@@ -1,5 +1,8 @@
 package com.empresa.empresa.entity;
 
+import javax.persistence.Entity;
+
+//@Entity
 public class Empresa {
     //Atributo
     private long idEmpresa;
@@ -10,6 +13,7 @@ public class Empresa {
     private String direccion;
 
     //Constructor
+    public Empresa(){}
     public Empresa(long idEmpresa, String nombre, String tipoIdentificacion, long numeroIdentificacion, long telefono, String direccion) {
         this.idEmpresa = idEmpresa;
         this.nombre = nombre;

@@ -1,9 +1,15 @@
 package com.empresa.empresa.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "usuarios")
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     //Atributos
-    private String idUsuario;
+    private long idUsuario;
     private String tipoIdentificacion;
     private long numeroIdentificacion;
     private String nombres;
@@ -11,10 +17,11 @@ public class Usuario {
     private String direccion;
     private long telefono;
     private String email;
-    private Rol idRol;
+    //private Rol idRol;
 
     //Constructor
-    public Usuario(String idUsuario, String tipoIdentificacion, long numeroIdentificacion, String nombres, String apellidos, String direccion, long telefono, String email, Rol idRol) {
+    public Usuario(){}
+    public Usuario(long idUsuario, String tipoIdentificacion, long numeroIdentificacion, String nombres, String apellidos, String direccion, long telefono, String email, Rol idRol) {
         this.idUsuario = idUsuario;
         this.tipoIdentificacion = tipoIdentificacion;
         this.numeroIdentificacion = numeroIdentificacion;
@@ -23,14 +30,14 @@ public class Usuario {
         this.direccion = direccion;
         this.telefono = telefono;
         this.email = email;
-        this.idRol = idRol;
+        //this.idRol = idRol;
     }
 
-    public String getIdUsuario() {
+    public long getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
+    public void setIdUsuario(long idUsuario) {
         this.idUsuario = idUsuario;
     }
 
@@ -90,11 +97,11 @@ public class Usuario {
         this.email = email;
     }
 
-    public Rol getIdRol() {
+    /*public Rol getIdRol() {
         return idRol;
     }
 
     public void setIdRol(Rol idRol) {
         this.idRol = idRol;
-    }
+    }*/
 }

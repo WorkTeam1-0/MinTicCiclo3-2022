@@ -1,6 +1,8 @@
 package com.empresa.empresa.entity;
 
+import javax.persistence.Entity;
 
+//@Entity
 public class Rol {
     //Atributo
     private long idRol;

@@ -3,10 +3,10 @@ package com.empresa.empresa.controller;
 import com.empresa.empresa.entity.Rol;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
-@RequestMapping("/api")
+//@RestController
+//@RequestMapping("/api")
 public class RolController {
-    @GetMapping("/rol/{id}")
+    /*@GetMapping("/rol/{id}")
     public Rol findById (@PathVariable long id){
         Rol rol = new Rol();
         rol.setIdRol(id);
@@ -34,5 +34,5 @@ public class RolController {
     public void deleteRol(@PathVariable long id){
         Rol deleteRol = findById(id);
 
-    }
+    }*/
 }
