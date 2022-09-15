@@ -1,38 +1,27 @@
 package com.empresa.empresa.controller;
 
 import com.empresa.empresa.entity.Rol;
+import com.empresa.empresa.service.RolService;
 import org.springframework.web.bind.annotation.*;
 
-//@RestController
-//@RequestMapping("/api")
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/rol")
 public class RolController {
-    /*@GetMapping("/rol/{id}")
-    public Rol findById (@PathVariable long id){
-        Rol rol = new Rol();
-        rol.setIdRol(id);
-        rol.setNombreRol("Admin");
-        return rol;
+    private final RolService rolService;
+
+    public RolController(RolService rolService) {
+        this.rolService = rolService;
     }
 
-    @PostMapping("/rol")
-    public Rol createRol (@RequestBody Rol rol){
-        Rol rol2 = new Rol();
-        rol2.setIdRol(rol.getIdRol());
-        rol2.setNombreRol(rol.getNombreRol());
-        return rol2;
+    @GetMapping
+    public List<Rol> getRol () {
+        return rolService.getRol();
     }
 
-    @PutMapping("/rol/{id}")
-    public Rol updateRol (@PathVariable long id, @RequestBody Rol rol) {
-        Rol putRol = new Rol();
-        putRol.setIdRol(id);
-        putRol.setNombreRol("Admin2");
-        return putRol;
+    @PostMapping
+    public void postRol (@RequestBody Rol rol) {
+        rolService.addNewRol(rol);
     }
-
-    @DeleteMapping("/rol/{id}")
-    public void deleteRol(@PathVariable long id){
-        Rol deleteRol = findById(id);
-
-    }*/
 }

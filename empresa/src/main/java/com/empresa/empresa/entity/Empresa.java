@@ -1,9 +1,13 @@
 package com.empresa.empresa.entity;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
-//@Entity
+@Entity
+@Table(name = "empresa")
 public class Empresa {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     //Atributo
     private long idEmpresa;
     private String nombre;

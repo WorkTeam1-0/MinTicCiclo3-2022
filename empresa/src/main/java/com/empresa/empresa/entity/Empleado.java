@@ -1,19 +1,23 @@
 package com.empresa.empresa.entity;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
-//@Entity
+@Entity
+@Table(name = "empleados")
 public class Empleado {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributo
     private long idEmpleado;
-    private Usuario idUsuario;
-    private Empresa idEmpresa;
+    //private Usuario idUsuario;
+    //private Empresa idEmpresa;
 
+    public Empleado(){}
     //Constructor
     public Empleado(long idEmpleado, Usuario idUsuario, Empresa idEmpresa) {
         this.idEmpleado = idEmpleado;
-        this.idUsuario = idUsuario;
-        this.idEmpresa = idEmpresa;
+        //this.idUsuario = idUsuario;
+        //this.idEmpresa = idEmpresa;
     }
 
     //Getters and Setters
@@ -25,7 +29,7 @@ public class Empleado {
         this.idEmpleado = idEmpleado;
     }
 
-    public Usuario getIdUsuario() {
+    /*public Usuario getIdUsuario() {
         return idUsuario;
     }
 
@@ -39,5 +43,5 @@ public class Empleado {
 
     public void setIdEmpresa(Empresa idEmpresa) {
         this.idEmpresa = idEmpresa;
-    }
+    }*/
 }

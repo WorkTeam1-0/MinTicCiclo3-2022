@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/usuario")
 public class UsuarioController {
 
     private final UsuarioService usuarioService;
@@ -25,4 +25,5 @@ public class UsuarioController {
     public void postUsuario (@RequestBody Usuario usuario) {
         usuarioService.addNewUser(usuario);
     }
+
 }

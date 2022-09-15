@@ -1,9 +1,12 @@
 package com.empresa.empresa.entity;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
-//@Entity
+@Entity
+@Table(name = "roles")
 public class Rol {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributo
     private long idRol;
     private String nombreRol;

@@ -1,35 +1,40 @@
 package com.empresa.empresa.entity;
 
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.Date;
 
-//@Entity
+@Entity
+@Table(name = "transacciones")
 public class Transaccion {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
     private long idTransaccion;
     private String concepto;
     private float monto;
-    private Usuario usuario;
-    private Empresa empresa;
+    //private Usuario usuario;
+    //private Empresa empresa;
     private String tipoTransaccion;
     private float cantidadProducto;
     private float totalPagar;
-    private Date fechaCreacion;
-    private Date fechaActualizacion;
+    //private Date fechaCreacion;
+    //private Date fechaActualizacion;
 
     //Constructor
+    public Transaccion(){}
     public Transaccion(long idTransaccion, String concepto, float monto, Usuario usuario, Empresa empresa, String tipoTransaccion, float cantidadProducto, float totalPagar, Date fechaCreacion, Date fechaActualizacion) {
         this.idTransaccion = idTransaccion;
         this.concepto = concepto;
         this.monto = monto;
-        this.usuario = usuario;
-        this.empresa = empresa;
+        //this.usuario = usuario;
+        //this.empresa = empresa;
         this.tipoTransaccion = tipoTransaccion;
         this.cantidadProducto = cantidadProducto;
         this.totalPagar = totalPagar;
-        this.fechaCreacion = fechaCreacion;
-        this.fechaActualizacion = fechaActualizacion;
+        //this.fechaCreacion = fechaCreacion;
+        //this.fechaActualizacion = fechaActualizacion;
     }
 
     //Getters and Setters
@@ -57,7 +62,7 @@ public class Transaccion {
         this.monto = monto;
     }
 
-    public Usuario getUsuario() {
+    /*public Usuario getUsuario() {
         return usuario;
     }
 
@@ -71,7 +76,7 @@ public class Transaccion {
 
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
-    }
+    }*/
 
     public String getTipoTransaccion() {
         return tipoTransaccion;
@@ -97,7 +102,7 @@ public class Transaccion {
         this.totalPagar = totalPagar;
     }
 
-    public Date getFechaCreacion() {
+    /*public Date getFechaCreacion() {
         return fechaCreacion;
     }
 
@@ -111,5 +116,5 @@ public class Transaccion {
 
     public void setFechaActualizacion(Date fechaActualizacion) {
         this.fechaActualizacion = fechaActualizacion;
-    }
+    }*/
 }
