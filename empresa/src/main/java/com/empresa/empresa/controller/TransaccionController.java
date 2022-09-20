@@ -25,4 +25,13 @@ public class TransaccionController {
     public void postTransaccion (@RequestBody Transaccion transaccion) {
         transaccionService.addNewTransaccion(transaccion);
     }
+
+    @PutMapping
+    public Transaccion updateTransaccion (@RequestBody Transaccion transaccion){
+        return this.transaccionService.updateTransaccion(transaccion);}
+
+    @DeleteMapping
+    public void deleteTransaccion (@PathVariable long id){
+        this.transaccionService.deleteTransaccion(id);
+    }
 }

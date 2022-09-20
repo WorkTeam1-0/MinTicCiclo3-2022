@@ -25,4 +25,12 @@ public class TransaccionService {
         transaccionRepository.save(transaccion);
         System.out.println(transaccion);
     }
+
+    public Transaccion updateTransaccion(Transaccion transaccion) {
+        return transaccionRepository.save(transaccion);
+    }
+
+    public void deleteTransaccion(long id) {
+        transaccionRepository.deleteById(id);
+    }
 }

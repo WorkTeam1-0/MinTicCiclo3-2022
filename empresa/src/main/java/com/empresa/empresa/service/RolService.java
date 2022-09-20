@@ -1,5 +1,6 @@
 package com.empresa.empresa.service;
 
+import com.empresa.empresa.entity.Empresa;
 import com.empresa.empresa.entity.Rol;
 import com.empresa.empresa.repository.RolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,13 @@ public class RolService {
     public void addNewRol (Rol rol){
         rolRepository.save(rol);
         System.out.println(rol);
+    }
+
+    public Rol updateRol(Rol rol) {
+        return rolRepository.save(rol);
+    }
+
+    public void deleteRol(long id) {
+        rolRepository.deleteById(id);
     }
 }

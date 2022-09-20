@@ -24,4 +24,13 @@ public class RolController {
     public void postRol (@RequestBody Rol rol) {
         rolService.addNewRol(rol);
     }
+
+    @PutMapping
+    public Rol updateRol (@RequestBody Rol rol){
+        return this.rolService.updateRol(rol);}
+
+    @DeleteMapping
+    public void deleteRol (@PathVariable long id){
+        this.rolService.deleteRol(id);
+    }
 }

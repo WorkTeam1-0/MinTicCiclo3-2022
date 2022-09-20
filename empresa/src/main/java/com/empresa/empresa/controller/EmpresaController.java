@@ -24,4 +24,13 @@ public class EmpresaController {
     public void postEmpresa (@RequestBody Empresa empresa) {
         empresaService.addNewEmpresa(empresa);
     }
+
+    @PutMapping
+    public Empresa updateEmpresa (@RequestBody Empresa empresa){
+        return this.empresaService.updateEmpresa(empresa);}
+
+    @DeleteMapping
+    public void deleteEmpresa (@PathVariable long id){
+        this.empresaService.deleteEmpresa(id);
+    }
 }

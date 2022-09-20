@@ -26,4 +26,12 @@ public class EmpresaService {
         empresaRepository.save(empresa);
         System.out.println(empresa);
     }
+
+    public Empresa updateEmpresa(Empresa empresa) {
+        return empresaRepository.save(empresa);
+    }
+
+    public void deleteEmpresa(long id) {
+        empresaRepository.deleteById(id);
+    }
 }

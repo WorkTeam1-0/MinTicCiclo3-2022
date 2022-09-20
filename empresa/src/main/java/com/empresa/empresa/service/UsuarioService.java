@@ -26,4 +26,11 @@ public class UsuarioService {
         System.out.println(usuario);
     }
 
+    public Usuario updateUsuario(Usuario usuario) {
+        return usuarioRepository.save(usuario);
+    }
+
+    public void deleteUsuario(long id) {
+        usuarioRepository.deleteById(id);
+    }
 }

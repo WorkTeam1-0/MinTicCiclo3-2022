@@ -26,4 +26,14 @@ public class UsuarioController {
         usuarioService.addNewUser(usuario);
     }
 
+    @PutMapping
+    public Usuario updateUsuario(@RequestBody Usuario usuario){
+        return this.usuarioService.updateUsuario(usuario);
+    }
+
+    @DeleteMapping
+    public void deleteUsuario(@PathVariable long id){
+        this.usuarioService.deleteUsuario(id);
+    }
+
 }

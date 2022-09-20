@@ -8,6 +8,4 @@ public class EmpresaApplication {
 
 	public static void main(String[] args) {SpringApplication.run(EmpresaApplication.class, args);}
 
-
-
 }
