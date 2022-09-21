@@ -31,7 +31,7 @@ public class EmpleadoController {
         return this.empleadoService.updateEmpleado(empleado);
     }
 
-    @DeleteMapping
+    @DeleteMapping ("/{id}")
     public void deleteEmpleado(@PathVariable long id){
         this.empleadoService.deleteEmpleado(id);
     }

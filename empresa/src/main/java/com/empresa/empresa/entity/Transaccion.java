@@ -12,12 +12,17 @@ public class Transaccion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
     private long idTransaccion;
+    @Column (name="concepto")
     private String concepto;
+    @Column (name="monto")
     private float monto;
     //private Usuario usuario;
     //private Empresa empresa;
+    @Column (name="tipoTransaccion")
     private String tipoTransaccion;
+    @Column (name="cantidadProducto")
     private float cantidadProducto;
+    @Column (name="totalPagar")
     private float totalPagar;
     //private Date fechaCreacion;
     //private Date fechaActualizacion;

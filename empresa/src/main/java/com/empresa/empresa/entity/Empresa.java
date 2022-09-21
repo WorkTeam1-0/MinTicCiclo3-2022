@@ -8,12 +8,17 @@ public class Empresa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    //Atributo
+    //Atribut
     private long idEmpresa;
+    @Column (name="nombre")
     private String nombre;
+    @Column (name="tipoIdentificacion")
     private String tipoIdentificacion;
+    @Column (name="numeroIdentificacion")
     private long numeroIdentificacion;
+    @Column (name="telefono")
     private long telefono;
+    @Column (name="direccion")
     private String direccion;
 
     //Constructor

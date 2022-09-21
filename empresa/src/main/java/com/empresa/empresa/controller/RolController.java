@@ -29,7 +29,7 @@ public class RolController {
     public Rol updateRol (@RequestBody Rol rol){
         return this.rolService.updateRol(rol);}
 
-    @DeleteMapping
+    @DeleteMapping ("/{id}")
     public void deleteRol (@PathVariable long id){
         this.rolService.deleteRol(id);
     }

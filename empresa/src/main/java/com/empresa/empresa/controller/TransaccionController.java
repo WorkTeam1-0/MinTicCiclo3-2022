@@ -30,7 +30,7 @@ public class TransaccionController {
     public Transaccion updateTransaccion (@RequestBody Transaccion transaccion){
         return this.transaccionService.updateTransaccion(transaccion);}
 
-    @DeleteMapping
+    @DeleteMapping ("/{id}")
     public void deleteTransaccion (@PathVariable long id){
         this.transaccionService.deleteTransaccion(id);
     }

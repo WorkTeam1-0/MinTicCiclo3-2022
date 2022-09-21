@@ -29,7 +29,7 @@ public class EmpresaController {
     public Empresa updateEmpresa (@RequestBody Empresa empresa){
         return this.empresaService.updateEmpresa(empresa);}
 
-    @DeleteMapping
+    @DeleteMapping ("/{id}")
     public void deleteEmpresa (@PathVariable long id){
         this.empresaService.deleteEmpresa(id);
     }

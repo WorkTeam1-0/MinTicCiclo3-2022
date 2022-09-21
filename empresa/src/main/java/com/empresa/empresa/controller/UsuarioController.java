@@ -31,7 +31,7 @@ public class UsuarioController {
         return this.usuarioService.updateUsuario(usuario);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deleteUsuario(@PathVariable long id){
         this.usuarioService.deleteUsuario(id);
     }

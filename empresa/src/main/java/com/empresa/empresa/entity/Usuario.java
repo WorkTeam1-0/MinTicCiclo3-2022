@@ -10,12 +10,19 @@ public class Usuario {
 
     //Atributos
     private long idUsuario;
+    @Column (name="tipoIdentificacion")
     private String tipoIdentificacion;
+    @Column (name="numeroIdentificacion")
     private long numeroIdentificacion;
+    @Column (name="nombres")
     private String nombres;
+    @Column (name="apellidos")
     private String apellidos;
+    @Column (name="direccion")
     private String direccion;
+    @Column (name="telefono")
     private long telefono;
+    @Column (name="email")
     private String email;
     //private Rol idRol;
 

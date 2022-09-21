@@ -9,6 +9,7 @@ public class Rol {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributo
     private long idRol;
+    @Column (name="nombreRol")
     private String nombreRol;
 
     //Constructor
