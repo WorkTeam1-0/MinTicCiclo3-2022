@@ -20,6 +20,8 @@ public class Empresa {
     private long telefono;
     @Column (name="direccion")
     private String direccion;
+    @Column (name="email")
+    private String email;
 
     //Constructor
     public Empresa(){}
@@ -30,6 +32,7 @@ public class Empresa {
         this.numeroIdentificacion = numeroIdentificacion;
         this.telefono = telefono;
         this.direccion = direccion;
+        this.email = email;
     }
 
     //Getters and Setters
@@ -80,5 +83,13 @@ public class Empresa {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
