@@ -3,6 +3,7 @@ package com.empresa.empresa.controller;
 import com.empresa.empresa.entity.Usuario;
 import com.empresa.empresa.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -22,8 +23,9 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public void postUsuario (@RequestBody Usuario usuario) {
+    public RedirectView postUsuario (@ModelAttribute Usuario usuario) {
         usuarioService.addNewUser(usuario);
+        return new RedirectView("/usuario");
     }
 
     @PutMapping
