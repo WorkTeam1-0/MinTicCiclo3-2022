@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"> xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
 
@@ -12,12 +12,12 @@
     <title>Registar Empresa</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -35,32 +35,33 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Crear nueva empresa!</h1>
                             </div>
-                            <form class="user">
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleNombreEmpresa"
-                                    placeholder="Nombre Empresa">
+                            <form th:action="@{/api/empresa}" th:method="post" th:object="${empresa}" class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input th:field="*{nombres}" type="text" class="form-control form-control-user" id="exampleNombres"
+                                               placeholder="Nombre Empresa">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleTipoDocumento"
+                                        <input th:field="*{tipoDocumento} type="text" class="form-control form-control-user" id="exampleTipoDocumento"
                                                placeholder="Tipo documento">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleNumeroDocumento"
+                                        <input th:field="*{numeroDocumento} type="text" class="form-control form-control-user" id="exampleNumeroDocumento"
                                                placeholder="Número documento">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    <input th:field="*{email} type="email" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Email">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleDireccion"
+                                        <input th:field="*{direccion} type="text" class="form-control form-control-user" id="exampleDireccion"
                                                placeholder="Dirección">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleTelefono"
+                                        <input th:field="*{telefono} type="text" class="form-control form-control-user" id="exampleTelefono"
                                                placeholder="Teléfono">
                                     </div>
                                 </div>
@@ -94,14 +95,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="/js/sb-admin-2.min.js"></script>
 
 </body>
 

@@ -412,7 +412,7 @@
                                             <td>
                                                 <div class="d-flex ms-5 gap-2 mt-2">
                                                     <a href="#"><img src="/img/update.png" alt=""></a>
-                                                    <form th:action="@{/api/user/{id}(id=${usuario.idUsuario})}" th:method="delete">
+                                                    <form th:action="@{/api/usuario/{id}(id=${usuario.idUsuario})}" th:method="delete">
                                                         <button class="border border-0 rounded-circle bg-transparent" type="submit"><img src="/img/delete.png" alt=""></button>
                                                     </form>
                                                 </div>
@@ -472,21 +472,21 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+    <script src="/js/demo/datatables-demo.js"></script>
 
 </body>
 
