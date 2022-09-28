@@ -31,6 +31,8 @@ public class UsuarioService {
     }
 
     public void deleteUsuario(long id) {
-        usuarioRepository.deleteById(id);
+        Usuario usuario=usuarioRepository.findById(id).get();
+        usuarioRepository.delete(usuario);
+        //usuarioRepository.deleteById(id);
     }
 }

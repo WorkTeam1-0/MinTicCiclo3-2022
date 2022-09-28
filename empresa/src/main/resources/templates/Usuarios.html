@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
 
@@ -364,15 +363,12 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Control de usuarios</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Lista usuarios</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -380,8 +376,8 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Tipo identificaciòn</th>
-                                            <th>Numero identificaciòn</th>
+                                            <th>Tipo identificación</th>
+                                            <th>Numero identificación</th>
                                             <th>Nombres</th>
                                             <th>Apellidos</th>
                                             <th>Dirección</th>
@@ -393,8 +389,8 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Tipo identificaciòn</th>
-                                            <th>Numero identificaciòn</th>
+                                            <th>Tipo identificación</th>
+                                            <th>Numero identificación</th>
                                             <th>Nombres</th>
                                             <th>Apellidos</th>
                                             <th>Dirección</th>
@@ -413,7 +409,14 @@
                                             <td th:text="${usuario.direccion}"></td>
                                             <td th:text="${usuario.telefono}"></td>
                                             <td th:text="${usuario.email}"></td>
-                                            <td></td>
+                                            <td>
+                                                <div class="d-flex ms-5 gap-2 mt-2">
+                                                    <a href="#"><img src="/img/update.png" alt=""></a>
+                                                    <form th:action="@{/api/user/{id}(id=${usuario.idUsuario})}" th:method="delete">
+                                                        <button class="border border-0 rounded-circle bg-transparent" type="submit"><img src="/img/delete.png" alt=""></button>
+                                                    </form>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>

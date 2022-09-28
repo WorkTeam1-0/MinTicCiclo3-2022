@@ -2,20 +2,22 @@ package com.empresa.empresa.controller;
 
 import com.empresa.empresa.entity.Usuario;
 import com.empresa.empresa.service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/usuario")
+@RequestMapping("/api/user")
 public class UsuarioController {
 
-    private final UsuarioService usuarioService;
+    @Autowired
+    private UsuarioService usuarioService;
 
-    public UsuarioController(UsuarioService usuarioService) {
+    /*public UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
-    }
+    }*/
 
     @GetMapping
     public List<Usuario> getUsuario () {
@@ -34,8 +36,9 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUsuario(@PathVariable long id){
+    public RedirectView delete(@PathVariable long id){
         this.usuarioService.deleteUsuario(id);
+        return new RedirectView("/usuario");
     }
 
 }

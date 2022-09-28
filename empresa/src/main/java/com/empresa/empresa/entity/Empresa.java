@@ -8,7 +8,7 @@ public class Empresa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    //Atribut
+    //Atributo
     private long idEmpresa;
     @Column (name="nombre")
     private String nombre;

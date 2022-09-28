@@ -7,8 +7,6 @@ import javax.persistence.*;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    //Atributos
     private long idUsuario;
     @Column (name="tipoIdentificacion")
     private String tipoIdentificacion;
