@@ -1,8 +1,10 @@
 package com.empresa.empresa.controller;
 
 import com.empresa.empresa.entity.Empresa;
+import com.empresa.empresa.entity.Usuario;
 import com.empresa.empresa.service.EmpresaService;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -26,8 +28,10 @@ public class EmpresaController {
     }
 
     @PutMapping
-    public Empresa updateEmpresa (@RequestBody Empresa empresa){
-        return this.empresaService.updateEmpresa(empresa);}
+    public RedirectView updateEmpresa(@ModelAttribute Empresa empresa){
+        this.empresaService.updateEmpresa(empresa);
+        return new RedirectView("/empresa");
+    }
 
     @DeleteMapping ("/{id}")
     public void deleteEmpresa (@PathVariable long id){

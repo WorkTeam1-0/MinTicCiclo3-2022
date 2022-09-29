@@ -34,4 +34,9 @@ public class EmpresaService {
     public void deleteEmpresa(long id) {
         empresaRepository.deleteById(id);
     }
+
+    public Empresa getEmpresaForId(long id) {
+        Empresa empresa=empresaRepository.findById(id).get();
+        return empresa;
+    }
 }

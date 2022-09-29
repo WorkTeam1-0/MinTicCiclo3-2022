@@ -398,7 +398,7 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                    <tr th:each="empresa:${empresas}">
+                                    <tr th:each="empresa:${empresa}">
                                         <td th:text="${empresa.idEmpresa}"></td>
                                         <td th:text="${empresa.nombres}"></td>
                                         <td th:text="${empresa.tipoIdentificacion}"></td>
@@ -408,10 +408,8 @@
                                         <td th:text="${empresa.email}"></td>
                                         <td>
                                             <div class="d-flex ms-5 gap-2 mt-2">
-                                                <a href="#"><img src="/img/update.png" alt=""></a>
-                                                <form th:action="@{/api/empresa/{id}(id=${empresa.idEmpresa})}" th:method="delete">
-                                                    <button class="border border-0 rounded-circle bg-transparent" type="submit"><img src="/img/delete.png" alt=""></button>
-                                                </form>
+                                                <a th:href="@{/empresa/actualizarEmpresa/{id}(id=${empresa.idEmpresa})}"><img src="/img/update.png" alt=""></a>
+                                                <a th:href="@{/api/empresa/{id}(id=${empresa.idEmpresa})}">  <img src="/img/delete.png" alt=""></a>
                                             </div>
                                         </td>
                                     </tr>
