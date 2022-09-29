@@ -31,11 +31,12 @@ public class UsuarioController {
     }
 
     @PutMapping
-    public Usuario updateUsuario(@RequestBody Usuario usuario){
-        return this.usuarioService.updateUsuario(usuario);
+    public RedirectView updateUsuario(@ModelAttribute Usuario usuario){
+        this.usuarioService.updateUsuario(usuario);
+        return new RedirectView("/usuario");
     }
 
-    @DeleteMapping("/{id}")
+    @GetMapping("/{id}")
     public RedirectView delete(@PathVariable long id){
         this.usuarioService.deleteUsuario(id);
         return new RedirectView("/usuario");

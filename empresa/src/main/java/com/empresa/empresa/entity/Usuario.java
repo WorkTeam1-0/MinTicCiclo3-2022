@@ -26,7 +26,7 @@ public class Usuario {
 
     //Constructor
     public Usuario(){}
-    public Usuario(long idUsuario, String tipoIdentificacion, long numeroIdentificacion, String nombres, String apellidos, String direccion, long telefono, String email, Rol idRol) {
+    public Usuario(long idUsuario, String tipoIdentificacion, long numeroIdentificacion, String nombres, String apellidos, String direccion, long telefono, String email) {
         this.idUsuario = idUsuario;
         this.tipoIdentificacion = tipoIdentificacion;
         this.numeroIdentificacion = numeroIdentificacion;

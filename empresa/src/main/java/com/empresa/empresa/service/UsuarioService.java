@@ -35,4 +35,11 @@ public class UsuarioService {
         usuarioRepository.delete(usuario);
         //usuarioRepository.deleteById(id);
     }
+
+    public Usuario getUsuarioForId(long id) {
+        Usuario usuario=usuarioRepository.findById(id).get();
+        return usuario;
+    }
+
+
 }
